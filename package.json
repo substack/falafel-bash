@@ -15,7 +15,7 @@
   "author": "substack",
   "license": "BSD",
   "dependencies": {
-    "bash-parser": "~0.3.2"
+    "bash-parser": "~0.4.0"
   },
   "devDependencies": {
     "tape": "^4.6.2"
