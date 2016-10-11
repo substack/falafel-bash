@@ -4,7 +4,7 @@ transform bash shell ast on a recursive walk
 
 This module is like [falafel][1], but for bash instead of javascript.
 
-[1]: https://npmjs.com/package/falafel-bash
+[1]: https://npmjs.com/package/falafel
 
 # example
 
