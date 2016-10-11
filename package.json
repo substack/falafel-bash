@@ -19,5 +19,17 @@
   },
   "devDependencies": {
     "tape": "^4.6.2"
-  }
+  },
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/substack/falafel-bash.git"
+  },
+  "bugs": {
+    "url": "https://github.com/substack/falafel-bash/issues"
+  },
+  "homepage": "https://github.com/substack/falafel-bash#readme"
 }
