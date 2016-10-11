@@ -9,12 +9,7 @@ module.exports = function (src, opts, fn) {
     src = src.toString()
   }
   if (typeof src !== 'string') src = String(src)
-  var lines = src.split('\n')
-  var offset = 0, offsets = []
-  lines.forEach(function (line) {
-    offsets.push(offset)
-    offset += line.length + 1
-  })
+
   var ast = parse(src, { insertLOC: true })
   var result = {
     chunks : src.split(''),
@@ -22,7 +17,7 @@ module.exports = function (src, opts, fn) {
     inspect : function () { return result.toString() }
   }
   ;(function walk (node, parent) {
-    insertHelpers(offsets, node, parent, result.chunks)
+    insertHelpers(node, parent, result.chunks)
     Object.keys(node).forEach(function (key) {
       if (key === 'parent') return
       var child = node[key]
@@ -42,7 +37,7 @@ module.exports = function (src, opts, fn) {
   return result
 }
 
-function insertHelpers (offsets, node, parent, chunks) {
+function insertHelpers (node, parent, chunks) {
   node.parent = parent
   node.source = function () {
     return chunks.slice(node.start, node.end).join('')
