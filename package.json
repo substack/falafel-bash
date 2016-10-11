@@ -15,6 +15,7 @@
   "author": "substack",
   "license": "BSD",
   "dependencies": {
+    "bash-ast-traverser": "^0.4.1",
     "bash-parser": "~0.4.0"
   },
   "devDependencies": {
