@@ -13,17 +13,17 @@ test('types', function (t) {
     types.push(node.type)
   })
   t.deepEqual(types, [
-    'word',
-    'simple_command',
-    'word',
-    'parameter_expansion',
-    'word',
-    'word',
-    'word',
-    'parameter_expansion',
-    'word',
-    'simple_command',
-    'complete_command'
+    'Word',
+    'Command',
+    'Word',
+    'ParameterExpansion',
+    'Word',
+    'Word',
+    'Word',
+    'ParameterExpansion',
+    'Word',
+    'Command',
+    'Script'
   ])
   t.end()
 })
