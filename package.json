@@ -1,6 +1,6 @@
 {
   "name": "falafel-bash",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "transform bash shell ast on a recursive walk",
   "main": "index.js",
   "scripts": {
