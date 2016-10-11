@@ -42,15 +42,15 @@ module.exports = function (src, opts, fn) {
   })(ast, undefined)
   return result
 }
- 
+
 function insertHelpers (offsets, node, parent, chunks) {
   node.parent = parent
   node.source = function () {
     return chunks.slice(node.start, node.end).join('')
   }
   if (node.loc) {
-    node.start = offsets[node.loc.startLine] + node.loc.startColumn
-    node.end = offsets[node.loc.endLine] + node.loc.endColumn + 1
+    node.start = node.loc.start.char
+    node.end = node.loc.end.char + 1
     delete node.loc
   }
   if (node.update && typeof node.update === 'object') {

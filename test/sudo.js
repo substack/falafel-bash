@@ -27,7 +27,7 @@ var expected = `
 
 test('sudo', function (t) {
   var output = falafel(src, function (node) {
-    if (node.type === 'simple_command' && node.name.text === 'sudo') {
+    if (node.type === 'Command' && node.name.text === 'sudo') {
       node.name.update('SUDO')
     }
   }).toString()
