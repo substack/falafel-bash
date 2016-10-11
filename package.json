@@ -1,0 +1,23 @@
+{
+  "name": "falafel-bash",
+  "version": "1.0.0",
+  "description": "transform bash shell ast on a recursive walk",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "keywords": [
+    "shell",
+    "bash",
+    "ast",
+    "falafel"
+  ],
+  "author": "substack",
+  "license": "BSD",
+  "dependencies": {
+    "bash-parser": "~0.3.2"
+  },
+  "devDependencies": {
+    "tape": "^4.6.2"
+  }
+}
