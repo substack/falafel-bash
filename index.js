@@ -33,7 +33,8 @@ module.exports = function (src, opts, fn) {
             walk(c, node)
           }
         })
-      } else if (child && typeof child.type === 'string') {
+      } else if (child && (typeof child.type === 'string' || child.loc)) {
+        if (!child.type) child.type = key
         walk(child, node)
       }
     })
