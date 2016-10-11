@@ -21,7 +21,6 @@ module.exports = function (src, opts, fn) {
     toString : function () { return result.chunks.join('') },
     inspect : function () { return result.toString() }
   }
-  var index = 0
   ;(function walk (node, parent) {
     insertHelpers(offsets, node, parent, result.chunks)
     Object.keys(node).forEach(function (key) {
